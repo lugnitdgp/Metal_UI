@@ -27,6 +27,12 @@ assetDir="../scss/"
     pre = "edit"
     url = "/posts/"
     weight = 2
+    
+    [[menu.main]]
+      name = "Documentation"
+      pre = "edit"
+      url = "/documentation/"
+      weight = 2
 
 [taxonomies]
   tag = "tags"
