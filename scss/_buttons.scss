@@ -39,6 +39,14 @@
   &:focus {
     outline: 0 !important;
   }
+  &:disabled,
+  fieldset:disabled & {
+   pointer-events: none;
+   border: 1px solid #999999;
+   background-color: $border-color;
+   color: #47474b;
+
+ }
 }
 .btn-outlined {
   @extend .btn;
@@ -58,6 +66,14 @@
   &:focus {
     outline: 0 !important;
   }
+  &:disabled,
+ fieldset:disabled & {
+   pointer-events: none;
+   border: 1px solid #999999;
+   background-color: $border-color;
+   color: #47474b;
+
+ }
 }
 .btn-text {
   @extend .btn;
@@ -75,4 +91,12 @@
   &:focus {
     outline: 0 !important;
   }
+  &:disabled,
+ fieldset:disabled & {
+   pointer-events: none;
+   border: 1px solid #999999;
+   background-color: $border-color;
+   color: #47474b;
+
+ }
 }
