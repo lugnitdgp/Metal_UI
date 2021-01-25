@@ -1,6 +1,11 @@
 # Metal Framework
+[![GSoC Heat 2021](https://img.shields.io/badge/GSOC%20HEAT-2021-orange)](https://nitdgpos.github.io/gsoc_heat)
+
 
 It's a project for GSoC Heat organized by GNU/Linux User's Group, NIT Durgapur.
+
+## Contribution guidelines
+Kindly follow [contributing.md](contributing.md), if you want to lend a hand in making this project better.
 
 ## Overview
 We use **Sass** to compile the **.scss** syntax to **.css** files.
