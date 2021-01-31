@@ -94,7 +94,7 @@
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _src_Button__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./src/Button */ \"./js/src/Button.js\");\n/* harmony import */ var _src_Form__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./src/Form */ \"./js/src/Form.js\");\n/* harmony import */ var _src_quizCard__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./src/quizCard */ \"./js/src/quizCard.js\");\n/* harmony import */ var _src_alertBox__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./src/alertBox */ \"./js/src/alertBox.js\");\n/* harmony import */ var _src_alertBox__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_src_alertBox__WEBPACK_IMPORTED_MODULE_3__);\n\n\n\n\n\n//# sourceURL=webpack:///./js/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _src_Button__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./src/Button */ \"./js/src/Button.js\");\n/* harmony import */ var _src_Form__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./src/Form */ \"./js/src/Form.js\");\n/* harmony import */ var _src_quizCard__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./src/quizCard */ \"./js/src/quizCard.js\");\n/* harmony import */ var _src_alertBox__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./src/alertBox */ \"./js/src/alertBox.js\");\n/* harmony import */ var _src_alertBox__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_src_alertBox__WEBPACK_IMPORTED_MODULE_3__);\n/* harmony import */ var _src_Carousel__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./src/Carousel */ \"./js/src/Carousel.js\");\n/* harmony import */ var _src_Carousel__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_src_Carousel__WEBPACK_IMPORTED_MODULE_4__);\n/* harmony import */ var _src_modal__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./src/modal */ \"./js/src/modal.js\");\n/* harmony import */ var _src_modal__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_src_modal__WEBPACK_IMPORTED_MODULE_5__);\n/* harmony import */ var _src_collapsible__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./src/collapsible */ \"./js/src/collapsible.js\");\n/* harmony import */ var _src_collapsible__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_src_collapsible__WEBPACK_IMPORTED_MODULE_6__);\n\n\n\n\n\n\n\n\n//# sourceURL=webpack:///./js/index.js?");
 
 /***/ }),
 
@@ -107,6 +107,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _src
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);\n\njquery__WEBPACK_IMPORTED_MODULE_0___default()('#btnbtn').click(function () {\n  alert('CLicked me rrr stf');\n});\n\n//# sourceURL=webpack:///./js/src/Button.js?");
+
+/***/ }),
+
+/***/ "./js/src/Carousel.js":
+/*!****************************!*\
+  !*** ./js/src/Carousel.js ***!
+  \****************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("var slideIndex = 1;\nshowSlides(slideIndex);\n\nfunction plusSlides(n) {\n  showSlides(slideIndex += n);\n}\n\nfunction currentSlide(n) {\n  showSlides(slideIndex = n);\n}\n\nfunction showSlides(n) {\n  var i;\n  var slides = document.getElementsByClassName(\"mySlides\");\n  var dots = document.getElementsByClassName(\"dot\");\n\n  if (n > slides.length) {\n    slideIndex = 1;\n  }\n\n  if (n < 1) {\n    slideIndex = slides.length;\n  }\n\n  for (i = 0; i < slides.length; i++) {\n    slides[i].style.display = \"none\";\n  }\n\n  for (i = 0; i < dots.length; i++) {\n    dots[i].className = dots[i].className.replace(\" active\", \"\");\n  }\n\n  slides[slideIndex - 1].style.display = \"block\";\n  dots[slideIndex - 1].className += \" active\";\n}\n\n//# sourceURL=webpack:///./js/src/Carousel.js?");
 
 /***/ }),
 
@@ -130,6 +141,28 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var jque
 /***/ (function(module, exports) {
 
 eval("var btn = document.getElementsByClassName(\"open\")[0];\nvar alert = document.getElementsByClassName(\"alert-box\")[0];\nvar node = document.createElement(\"span\");\nvar textnode = document.createTextNode(\"x\");\nvar text = document.getElementsByClassName(\"content\")[0];\nvar message = btn.getAttribute(\"message\");\n\nbtn.onclick = function () {\n  alert.style.display = \"block\";\n  text.innerHTML = message;\n  node.appendChild(textnode);\n  document.getElementsByClassName(\"content\")[0].appendChild(node).classList.add(\"alert-close\");\n  var close = document.getElementsByClassName(\"alert-close\")[0];\n\n  close.onclick = function () {\n    alert.style.display = \"none\";\n  };\n\n  setTimeout(function () {\n    alert.style.display = \"none\";\n  }, 3000);\n};\n\n//# sourceURL=webpack:///./js/src/alertBox.js?");
+
+/***/ }),
+
+/***/ "./js/src/collapsible.js":
+/*!*******************************!*\
+  !*** ./js/src/collapsible.js ***!
+  \*******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("var coll = document.getElementsByClassName(\"collapsible\");\nvar i;\n\nfor (i = 0; i < coll.length; i++) {\n  coll[i].addEventListener(\"click\", function () {\n    this.classList.toggle(\"active\");\n    var content = this.nextElementSibling;\n\n    if (content.style.display === \"block\") {\n      content.style.display = \"none\";\n    } else {\n      content.style.display = \"block\";\n    }\n  });\n}\n\n//# sourceURL=webpack:///./js/src/collapsible.js?");
+
+/***/ }),
+
+/***/ "./js/src/modal.js":
+/*!*************************!*\
+  !*** ./js/src/modal.js ***!
+  \*************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("var modal = document.getElementById(\"myModal\"); // Get the button that opens the modal\n\nvar btn = document.getElementById(\"myBtn\"); // Get the <span> element that closes the modal\n\nvar span = document.getElementsByClassName(\"close\")[0]; // When the user clicks the button, open the modal \n\nbtn.onclick = function () {\n  modal.style.display = \"block\";\n}; // When the user clicks on <span> (x), close the modal\n\n\nspan.onclick = function () {\n  modal.style.display = \"none\";\n}; // When the user clicks anywhere outside of the modal, close it\n\n\nwindow.onclick = function (event) {\n  if (event.target == modal) {\n    modal.style.display = \"none\";\n  }\n};\n\n//# sourceURL=webpack:///./js/src/modal.js?");
 
 /***/ }),
 

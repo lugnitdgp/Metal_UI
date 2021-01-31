@@ -1,5 +1,4 @@
 {{ define "main" }}
-
 <div class="jumbotron jumbotron-fluid text-center" style="width:100vw;margin:0;padding:0;overflow:hidden;background-color:#e8e1e1">
   <div class="container" style="padding:20px;">
     <h1 class="display-4">{{ .Site.Title }}</h1>
@@ -167,6 +166,73 @@
     </div>
     <button class="btn-contained">Click Me</button>
   </div>
+<div class="slideshow-container">
+
+  <div class="carousel fade">
+    <div class="numtext">1 / 3</div>
+    <img src="https://media.wired.com/photos/59271340ac01987bf0138709/master/pass/SpiderMan.jpg" style="width:100%">
+    <div class="text">First Slide</div>
+  </div>
+  
+  <div class="carousel fade">
+    <div class="numtext">2 / 3</div>
+    <img src="https://media.wired.com/photos/59271340ac01987bf0138709/master/pass/SpiderMan.jpg" style="width:100%">
+    <div class="text">Second Slide</div>
+  </div>
+  
+  <div class="carousel fade">
+    <div class="numtext">3 / 3</div>
+    <img src="https://media.wired.com/photos/59271340ac01987bf0138709/master/pass/SpiderMan.jpg" style="width:100%">
+    <div class="text">Third Slide</div>
+  </div>
+  
+  <a class="prevSlide" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="nextSlide" onclick="plusSlides(1)">&#10095;</a>
+  
+  </div>
+  <br>
+  
+  <div style="text-align:center">
+    <span class="nav_dot" onclick="currentSlide(2)"></span> 
+    <span class="nav_dot" onclick="currentSlide(3)"></span> 
+    <span class="nav_dot" onclick="currentSlide(1)"></span> 
+  </div>
+  <script>
+    var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+  </script>
+<div class="Warning">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+  This is an alert box.
+</div>
+<div class="Success">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+  This is an alert box.
 </div>
 
+</div>
 {{ end }}
