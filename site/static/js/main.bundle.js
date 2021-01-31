@@ -94,7 +94,7 @@
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _src_Button__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./src/Button */ \"./js/src/Button.js\");\n/* harmony import */ var _src_Form__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./src/Form */ \"./js/src/Form.js\");\n/* harmony import */ var _src_quizCard__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./src/quizCard */ \"./js/src/quizCard.js\");\n/* harmony import */ var _src_alertBox__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./src/alertBox */ \"./js/src/alertBox.js\");\n/* harmony import */ var _src_alertBox__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_src_alertBox__WEBPACK_IMPORTED_MODULE_3__);\n\n\n\n\n\n//# sourceURL=webpack:///./js/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _src_Button__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./src/Button */ \"./js/src/Button.js\");\n/* harmony import */ var _src_Form__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./src/Form */ \"./js/src/Form.js\");\n/* harmony import */ var _src_quizCard__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./src/quizCard */ \"./js/src/quizCard.js\");\n/* harmony import */ var _src_alertBox__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./src/alertBox */ \"./js/src/alertBox.js\");\n/* harmony import */ var _src_alertBox__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_src_alertBox__WEBPACK_IMPORTED_MODULE_3__);\n/* harmony import */ var _src_Carousel__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./src/Carousel */ \"./js/src/Carousel.js\");\n/* harmony import */ var _src_Carousel__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_src_Carousel__WEBPACK_IMPORTED_MODULE_4__);\n\n\n\n\n\n\n//# sourceURL=webpack:///./js/index.js?");
 
 /***/ }),
 
@@ -107,6 +107,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _src
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);\n\njquery__WEBPACK_IMPORTED_MODULE_0___default()('#btnbtn').click(function () {\n  alert('CLicked me rrr stf');\n});\n\n//# sourceURL=webpack:///./js/src/Button.js?");
+
+/***/ }),
+
+/***/ "./js/src/Carousel.js":
+/*!****************************!*\
+  !*** ./js/src/Carousel.js ***!
+  \****************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("var slideIndex = 1;\nshowSlides(slideIndex);\n\nfunction plusSlides(n) {\n  showSlides(slideIndex += n);\n}\n\nfunction currentSlide(n) {\n  showSlides(slideIndex = n);\n}\n\nfunction showSlides(n) {\n  var i;\n  var slides = document.getElementsByClassName(\"carousel\");\n  var dots = document.getElementsByClassName(\"nav_dot\");\n\n  if (n > slides.length) {\n    slideIndex = 1;\n  }\n\n  if (n < 1) {\n    slideIndex = slides.length;\n  }\n\n  for (i = 0; i < slides.length; i++) {\n    slides[i].style.display = \"none\";\n  }\n\n  for (i = 0; i < dots.length; i++) {\n    dots[i].className = dots[i].className.replace(\" active\", \"\");\n  }\n\n  slides[slideIndex - 1].style.display = \"block\";\n  dots[slideIndex - 1].className += \" active\";\n}\n\n//# sourceURL=webpack:///./js/src/Carousel.js?");
 
 /***/ }),
 
