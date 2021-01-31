@@ -170,19 +170,19 @@
 
   <div class="carousel fade">
     <div class="numtext">1 / 3</div>
-    <img src="https://media.wired.com/photos/59271340ac01987bf0138709/master/pass/SpiderMan.jpg" style="width:100%">
+    <img src="https://media.wired.com/photos/59271340ac01987bf0138709/master/pass/SpiderMan.jpg" style="width:100%" alt="">
     <div class="text">First Slide</div>
   </div>
   
   <div class="carousel fade">
     <div class="numtext">2 / 3</div>
-    <img src="https://media.wired.com/photos/59271340ac01987bf0138709/master/pass/SpiderMan.jpg" style="width:100%">
+    <img src="https://static2.cbrimages.com/wordpress/wp-content/uploads/2020/12/The-Batman-Jim-Lee-Header.jpg" style="width:100%" alt="">
     <div class="text">Second Slide</div>
   </div>
   
   <div class="carousel fade">
     <div class="numtext">3 / 3</div>
-    <img src="https://media.wired.com/photos/59271340ac01987bf0138709/master/pass/SpiderMan.jpg" style="width:100%">
+    <img src="https://www.screengeek.net/wp-content/uploads/2020/07/iron-man-captain-america-thor.jpg" style="width:100%" alt="">
     <div class="text">Third Slide</div>
   </div>
   
@@ -211,8 +211,8 @@ function currentSlide(n) {
 
 function showSlides(n) {
   var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
+  var slides = document.getElementsByClassName("carousel");
+  var dots = document.getElementsByClassName("nav_dot");
   if (n > slides.length) {slideIndex = 1}    
   if (n < 1) {slideIndex = slides.length}
   for (i = 0; i < slides.length; i++) {
